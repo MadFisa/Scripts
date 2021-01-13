@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head> 
+    <title>UKSSDC | Swift-XRT spectrum for GRB 080207</title>
+    <meta name="keywords" content="Swift, GRB, XRT, spectrum">
+    <meta name="description" content="UKSSDC | Swift-XRT spectrum for GRB 080207" lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <link href="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/autoproc_xrt_spec.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/dropdown.js"></script>
+    <link rel="icon" href="https://www.swift.ac.uk/icons/swift.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <div id="holder">
+    <p style="visibility: hidden; display: none;"><a href="#mainContentPostBanner">Skip banner and navigation tools</a>.</p>
+  <div id="swiftbanner">
+    <div id="uolbanner">
+      <a href="http://www.le.ac.uk/">
+      <img class="uollogo" src="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/uol_logo.png" alt="University of Leicester logo"></a>
+      <a href="http://www2.le.ac.uk/departments/physics/">School of Physics &amp; Astronomy</a>
+     
+    </div>
+
+    <a href="https://swift.gsfc.nasa.gov/" id="us"><span class="hidden">US Site | </span></a>
+    <a href="https://swift.asdc.asi.it/" id="it"><span class="hidden">Italian Site | </span></a>
+    <a href="https://www.swift.ac.uk/" id="uk"><span class="hidden">UK site</span></a>
+  </div>
+
+  <div id="addressBar">
+      <form class="right search" action="/search/search.php" method="get">
+      <p>
+          <label for="searchBox">Search:</label> 
+          <input id="searchBox" type="text" name="terms">
+          <input type="submit" name="submit" value="?">
+      </p>
+      </form>
+      <span class="right">&nbsp;|&nbsp;</span>
+      <a class="right" href="https://www.swift.ac.uk/sitemap.php">site map</a>
+  <ul>
+    <li>
+      <a href="https://www.swift.ac.uk/index.php">Home</a>
+    </li>
+
+    <li>
+      <a href="https://www.swift.ac.uk/about/index.php" onmouseover="menu_open('mabout')" onmouseout="menu_closetime()">About</a>
+        <div id="mabout" onmouseover="menu_cancelclosetime()" onmouseout="menu_closetime()">
+        <a href="https://www.swift.ac.uk/about/index.php">The Swift Mission</a>
+        <a href="https://www.swift.ac.uk/about/uk.php">UK involvement</a>
+        <a href="https://www.swift.ac.uk/about/instruments.php">Instruments</a>
+        <hr>
+        <a href="https://www.swift.ac.uk/about/grb.php">GRBs before Swift </a>
+        <a href="https://www.swift.ac.uk/about/swiftera.php">GRBs in the Swift era</a>
+        <a href="https://www.swift.ac.uk/about/swifteranongrb.php">Non-GRB science with Swift</a>
+        <a href="https://www.swift.ac.uk/about/research.php">GRB research at Leicester</a>
+        
+        <hr>
+        <a href="https://www.swift.ac.uk/about/status.php">Spacecraft status</a>
+        <a href="https://www.swift.ac.uk/about/press.php">Swift in the press</a>
+        <a href="https://www.swift.ac.uk/about/videos.php">Swift Videos</a>
+        </div>
+    </li>
+
+   
+    <li>
+      <a href="https://www.swift.ac.uk/support/index.php" onmouseover="menu_open('msupport')" onmouseout="menu_closetime()">Support</a>
+
+      <div id="msupport" onmouseover="menu_cancelclosetime()" onmouseout="menu_closetime()">
+      <a href="https://www.swift.ac.uk/support/index.php">Helpdesk</a>
+      <a href="https://www.swift.ac.uk/support/too.php">TOO requests</a>
+      <a href="https://www.swift.ac.uk/support/gi.php">Guest Investigator program</a>
+      <a href="https://www.swift.ac.uk/sunpos.php">Target visibility checker</a>
+      <a href="https://www.swift.ac.uk/support/transientSearch">Search transient database</a>
+      </div>
+    </li>
+
+ 
+    <li>
+      <a href="https://www.swift.ac.uk/archive/index.php" onmouseover="menu_open('marchive')" onmouseout="menu_closetime()">Data Access</a>
+
+      <div id="marchive" onmouseover="menu_cancelclosetime()" onmouseout="menu_closetime()">
+      <a href="https://www.swift.ac.uk/archive/index.php">Overview</a>
+      <a href="https://www.swift.ac.uk/archive/ql.php">Quick Look</a>
+      <a href="https://www.swift.ac.uk/gcn/index.php">GCN Notices</a>
+      <a href="https://www.swift.ac.uk/swift_portal">Download obs data</a>
+      <a href="https://www.swift.ac.uk/swift_live">Search obs catalogue</a>
+      <a href="https://www.swift.ac.uk/1SXPS">The 1SXPS catalogue</a>
+      <a href="https://www.swift.ac.uk/2SXPS">The 2SXPS catalogue</a>
+      </div>
+    </li>
+    
+    
+    <li>
+      <a href="https://www.swift.ac.uk/analysis/index.php" onmouseover="menu_open('manal')" onmouseout="menu_closetime()">Data Analysis</a>
+
+      <div id="manal" onmouseover="menu_cancelclosetime()" onmouseout="menu_closetime()">
+      <a href="https://www.swift.ac.uk/analysis/index.php">Data analysis overview</a>
+      <a href="https://www.swift.ac.uk/analysis/software.php">Swift software</a>
+      <hr>
+      <a href="https://www.swift.ac.uk/user_objects/">Build XRT products</a>
+      <hr>
+      <a href="https://www.swift.ac.uk/analysis/bat/index.php">BAT data analysis guide</a>
+      <a href="https://www.swift.ac.uk/analysis/xrt/index.php">XRT data analysis guide</a>
+      <a href="https://www.swift.ac.uk/analysis/xrt/digest_sci.php">XRT digest</a>
+      <a href="https://www.swift.ac.uk/analysis/uvot/index.php">UVOT data analysis guide</a>
+      </div>
+    </li>
+    
+    
+
+    <li>
+      <a href="https://www.swift.ac.uk/xrt_products/index.php" onmouseover="menu_open('mproducts')" onmouseout="menu_closetime()">GRB Products</a>
+
+      <div id="mproducts" onmouseover="menu_cancelclosetime()" onmouseout="menu_closetime()">
+
+        Full dataset
+        <a href="https://www.swift.ac.uk/xrt_products/index.php">Swift XRT products for GRBs</a>
+        <a href="https://www.swift.ac.uk/xrt_positions/">XRT positions</a>
+        <a href="https://www.swift.ac.uk/xrt_curves/">XRT light curves</a>
+        <a href="https://www.swift.ac.uk/xrt_spectra/">XRT spectra</a>
+        <a href="https://www.swift.ac.uk/xrt_live_cat/">XRT GRB catalogue</a>
+        <a href="https://www.swift.ac.uk/xrt_images/">XRT GRB images</a>
+        <a title="Burst Analyser index page" href="https://www.swift.ac.uk/burst_analyser/">Burst analyser</a>
+ 
+        Prompt dataset
+        <a href="https://www.swift.ac.uk/grb_region/">GRB field info</a>
+        <a title="X-ray Prompt data index page" href="https://www.swift.ac.uk/sper/">XRT prompt analysis</a>      </div>
+    </li>
+
+    <li>
+      <a href="https://www.swift.ac.uk/results/index.php" onmouseover="menu_open('mresults')" onmouseout="menu_closetime()">Publications</a>
+
+       <div id="mresults" onmouseover="menu_cancelclosetime()" onmouseout="menu_closetime()">
+        <a href="https://www.swift.ac.uk/results/index.php">Publication index</a>
+        <a href="https://www.swift.ac.uk/results/pub.php">Published papers</a>
+        <a href="https://www.swift.ac.uk/results/sub.php">Submitted papers</a>
+        <a href="https://www.swift.ac.uk/results/spie.php">XRT instrument papers</a>
+        <a href="https://www.swift.ac.uk/results/atels.php">ATels</a>
+        <a href="https://www.swift.ac.uk/results/grbs.php">GCNs</a>
+        <a href="https://www.swift.ac.uk/results/conferences.php">Conferences</a>
+      </div>
+    </li>
+
+    <li>
+      <a href="https://www.swift.ac.uk/links.php" onmouseover="menu_open('mlinks')" onmouseout="menu_closetime()">Links</a>
+
+      <div id="mlinks" onmouseover="menu_cancelclosetime()" onmouseout="menu_closetime()">
+      
+            Databases
+	    <a href="http://ned.ipac.caltech.edu/">NED</a>
+	    <a href="http://simbad.u-strasbg.fr/Simbad">Simbad</a>
+            <a href="http://gcn.gsfc.nasa.gov/gcn3_archive.html">GCN circulars archive</a>
+            <a href="https://swift.gsfc.nasa.gov/docs/swift/archive/grb_table/">GRB data table</a>
+	    Software &amp; Tools
+	    <a href="https://heasarc.nasa.gov/lheasoft/">Swift Software (HEASoft)</a>
+            <a href="https://heasarc.gsfc.nasa.gov/xanadu/xanadu.html">Xanadu</a>
+            <a href="https://heasarc.gsfc.nasa.gov/cgi-bin/Tools/w3pimms/w3pimms.pl">WebPIMMS</a>
+	    Institutional Swift Sites
+	    <a href="https://swift.gsfc.nasa.gov/">GSFC</a>
+	    <a href="http://www.swift.psu.edu/">PSU</a>
+	    <a href="http://www.brera.inaf.it/~swift/SWIFT/">OAB</a>
+	    <a href="https://swift.ssdc.asi.it/">SSDC</a>
+	    <a href="http://www.mssl.ucl.ac.uk/general/projects/swift/SWIFT6.html">MSSL</a>
+	    <a href="http://www.swift.ac.uk/">University of Leicester</a>
+                  </div>
+    </li>
+  </ul>  <br id="mainContentPostBanner" style="visibility: hidden; display: none;">
+  </div>
+  <p id="breadcrumb"><a href="https://www.swift.ac.uk/" title="UKSSDC home">Home</a> &gt; <a href="https://www.swift.ac.uk/xrt_products">GRB products</a> &gt; <a href="https://www.swift.ac.uk/xrt_spectra">XRT spectra</a> &gt;  <a href="https://www.swift.ac.uk/xrt_spectra/00302728">GRB 080207</a> &gt; Time-sliced spectra</p>
+
+    <h1>Swift/XRT spectra of GRB 080207</h1>
+<p style="text-align: center; margin:-10px 0 0 0;">xrtpipeline was called using the Swift 6.28 software</p>
+<p id="related"><strong>Related pages:</strong>
+    <a title="Burst Analyser page for GRB 080207" href="https://www.swift.ac.uk/burst_analyser/00302728/">Burst Analyser</a>
+ |     <a title="Enhanced Position details for GRB 080207" href="https://www.swift.ac.uk/xrt_positions/00302728">Enhanced position</a>
+ |     <a title="Light curve page for GRB 080207" href="https://www.swift.ac.uk/xrt_curves/00302728">Light curve</a>
+ |     <a title="Image page for GRB 080207" href="https://www.swift.ac.uk/xrt_images/00302728">Image</a>
+ |     <a title="GRB region information for GRB 080207" href="https://www.swift.ac.uk/grb_region/302728">GRB Region information</a>
+ |     <a title="Catalogue results for GRB 080207" href="https://www.swift.ac.uk//xrt_live_cat/00302728">XRT Catalogue entry</a>
+ |     <a title="Download data for GRB 080207" href="https://www.swift.ac.uk/archive/selectseq.php?tid=00302728&amp;source=obs">Download obs data</a>
+ |     <a title="BAT automated analysis GRB 080207" href="http://gcn.gsfc.nasa.gov/notices_s/302728/BA">BAT analysis</a>
+ |     <a title="GCN Notices for GRB 080207" href="https://www.swift.ac.uk/gcn/index.php#target|00302728">GCN Notices</a>
+ |     <a title="GCN Circulars for GRB 080207" href="http://gcn.gsfc.nasa.gov/other/080207.gcn3">GCN Circulars</a>
+  </p>
+
+    
+    
+    <p style="float: left;"><a href="https://www.swift.ac.uk/xrt_spectra/docs.php#products">About these products</a>.</p>
+    <p style="float: right;"><a href="https://www.swift.ac.uk/xrt_spectra/">Get another burst</a>.</p>
+    <p style="clear: both;"><a href="https://www.swift.ac.uk/xrt_spectra/addspec.php?targ=00302728">Build another time-sliced spectrum</a>.</p>
+    <p style="clear: both;"><a href="https://www.swift.ac.uk/xrt_spectra/00302728">Standard spectrum for this GRB</a>.</p>
+<p>Jump to: <a href="#spec0">spec0</a>|<a href="#spec1">spec1</a>|<a href="#spec2">spec2</a>|<a href="#spec3">spec3</a>|<a href="#spec4">spec4</a>|<a href="#spec5">spec5</a>|<a href="#spec6">spec6</a></p>    <h2 id="spec0">spec0 spectrum (T0 + 4749 to 6023 s)</h2>
+      <p><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec0.tar.gz">Download spectral files for spec0 spectrum</a>.</p>
+    <h3>Plots to download</h3>
+    <ul class="prods" title="Other files to download for spec0 spectra">
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec0pc_plot.ps" title="$extn" mode="" image="" of="" spec0="" pc="" spectrum"="">pc mode ps file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec0pc_plot.gif" title="$extn" mode="" image="" of="" spec0="" pc="" spectrum"="">pc mode gif file</a></li> 
+    </ul>
+    <img class="prodimg" src="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/spec0pc_plot.gif" alt="PC mode spectrum of %NAME%" style="max-width: 740px;">
+  
+    <!-- Now plot the results table -->    
+    <br style="clear: both;">
+
+    <div class="fitres">
+      <h3>PC mode. Mean photon arrival: T0+5313 s</h3>
+      <table summary="Model fitted to spec0 data" cellspacing="2px" cellpadding="2px" border="1px">
+        <tbody><tr><th>N<sub>H</sub> (Galactic)</th><td>2.11e+20 cm<sup>-2</sup></td></tr>
+        <tr><th>N<sub>H</sub> (intrinsic)</th><td>1.82 (+0.82, -0.64) x 10<sup>23</sup> cm<sup>-2</sup> </td></tr>
+        <tr><th>z of absorber</th><td>2.0858</td></tr>
+        <tr><th>Photon index</th><td>2.07 (+0.42, -0.39)</td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Observed)</th><td>2.93 (+0.63, -0.51) x 10<sup>-11</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Unabsorbed)</th><td>4.9 x 10<sup>-11</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (obs)</th><td>4.7 x 10<sup>-11</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (unabs)</th><td>7.9 x 10<sup>-11</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>C-stat (dof)</th><td>131.93 (131)</td></tr>
+        <tr><th>Exposure time</th><td>1.1 ks</td></tr>
+      </tbody></table>
+    </div>
+<p style="clear: both; font-size: 80%;">[<a href="#holder">Back to top</a>]</p>
+    <hr style="width: 75%; margin: 0px auto; clear: both;">
+    <h2 id="spec1">spec1 spectrum (T0 + 6023 to 7256 s)</h2>
+      <p><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec1.tar.gz">Download spectral files for spec1 spectrum</a>.</p>
+    <h3>Plots to download</h3>
+    <ul class="prods" title="Other files to download for spec1 spectra">
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec1pc_plot.ps" title="$extn" mode="" image="" of="" spec1="" pc="" spectrum"="">pc mode ps file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec1pc_plot.gif" title="$extn" mode="" image="" of="" spec1="" pc="" spectrum"="">pc mode gif file</a></li> 
+    </ul>
+    <img class="prodimg" src="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/spec1pc_plot.gif" alt="PC mode spectrum of %NAME%" style="max-width: 740px;">
+  
+    <!-- Now plot the results table -->    
+    <br style="clear: both;">
+
+    <div class="fitres">
+      <h3>PC mode. Mean photon arrival: T0+6641 s</h3>
+      <table summary="Model fitted to spec1 data" cellspacing="2px" cellpadding="2px" border="1px">
+        <tbody><tr><th>N<sub>H</sub> (Galactic)</th><td>2.11e+20 cm<sup>-2</sup></td></tr>
+        <tr><th>N<sub>H</sub> (intrinsic)</th><td>2.09 (+0.84, -0.69) x 10<sup>23</sup> cm<sup>-2</sup> </td></tr>
+        <tr><th>z of absorber</th><td>2.0858</td></tr>
+        <tr><th>Photon index</th><td>2.23 (+0.44, -0.40)</td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Observed)</th><td>1.49 (+0.33, -0.26) x 10<sup>-11</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Unabsorbed)</th><td>2.5 x 10<sup>-11</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (obs)</th><td>4.5 x 10<sup>-11</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (unabs)</th><td>7.6 x 10<sup>-11</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>C-stat (dof)</th><td>106.33 (132)</td></tr>
+        <tr><th>Exposure time</th><td>1.1 ks</td></tr>
+      </tbody></table>
+    </div>
+<p style="clear: both; font-size: 80%;">[<a href="#holder">Back to top</a>]</p>
+    <hr style="width: 75%; margin: 0px auto; clear: both;">
+    <h2 id="spec2">spec2 spectrum (T0 + 10520 to 13031 s)</h2>
+      <p><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec2.tar.gz">Download spectral files for spec2 spectrum</a>.</p>
+    <h3>Plots to download</h3>
+    <ul class="prods" title="Other files to download for spec2 spectra">
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec2pc_plot.ps" title="$extn" mode="" image="" of="" spec2="" pc="" spectrum"="">pc mode ps file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec2pc_plot.gif" title="$extn" mode="" image="" of="" spec2="" pc="" spectrum"="">pc mode gif file</a></li> 
+    </ul>
+    <img class="prodimg" src="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/spec2pc_plot.gif" alt="PC mode spectrum of %NAME%" style="max-width: 740px;">
+  
+    <!-- Now plot the results table -->    
+    <br style="clear: both;">
+
+    <div class="fitres">
+      <h3>PC mode. Mean photon arrival: T0+11769 s</h3>
+      <table summary="Model fitted to spec2 data" cellspacing="2px" cellpadding="2px" border="1px">
+        <tbody><tr><th>N<sub>H</sub> (Galactic)</th><td>2.11e+20 cm<sup>-2</sup></td></tr>
+        <tr><th>N<sub>H</sub> (intrinsic)</th><td>1.90 (+0.55, -0.47) x 10<sup>23</sup> cm<sup>-2</sup> </td></tr>
+        <tr><th>z of absorber</th><td>2.0858</td></tr>
+        <tr><th>Photon index</th><td>2.31 (+0.31, -0.30)</td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Observed)</th><td>6.52 (+0.98, -0.84) x 10<sup>-12</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Unabsorbed)</th><td>1.9 x 10<sup>-11</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (obs)</th><td>4.1 x 10<sup>-11</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (unabs)</th><td>1.2 x 10<sup>-10</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>C-stat (dof)</th><td>172.15 (204)</td></tr>
+        <tr><th>Exposure time</th><td>2.5 ks</td></tr>
+      </tbody></table>
+    </div>
+<p style="clear: both; font-size: 80%;">[<a href="#holder">Back to top</a>]</p>
+    <hr style="width: 75%; margin: 0px auto; clear: both;">
+    <h2 id="spec3">spec3 spectrum (T0 + 16298 to 18841 s)</h2>
+      <p><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec3.tar.gz">Download spectral files for spec3 spectrum</a>.</p>
+    <h3>Plots to download</h3>
+    <ul class="prods" title="Other files to download for spec3 spectra">
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec3pc_plot.ps" title="$extn" mode="" image="" of="" spec3="" pc="" spectrum"="">pc mode ps file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec3pc_plot.gif" title="$extn" mode="" image="" of="" spec3="" pc="" spectrum"="">pc mode gif file</a></li> 
+    </ul>
+    <img class="prodimg" src="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/spec3pc_plot.gif" alt="PC mode spectrum of %NAME%" style="max-width: 740px;">
+  
+    <!-- Now plot the results table -->    
+    <br style="clear: both;">
+
+    <div class="fitres">
+      <h3>PC mode. Mean photon arrival: T0+17474 s</h3>
+      <table summary="Model fitted to spec3 data" cellspacing="2px" cellpadding="2px" border="1px">
+        <tbody><tr><th>N<sub>H</sub> (Galactic)</th><td>2.11e+20 cm<sup>-2</sup></td></tr>
+        <tr><th>N<sub>H</sub> (intrinsic)</th><td>1.29 (+0.66, -0.54) x 10<sup>23</sup> cm<sup>-2</sup> </td></tr>
+        <tr><th>z of absorber</th><td>2.0858</td></tr>
+        <tr><th>Photon index</th><td>1.96 (+0.42, -0.39)</td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Observed)</th><td>3.25 (+0.77, -0.60) x 10<sup>-12</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Unabsorbed)</th><td>3.5 x 10<sup>-12</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (obs)</th><td>4.5 x 10<sup>-11</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (unabs)</th><td>4.9 x 10<sup>-11</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>C-stat (dof)</th><td>104.12 (125)</td></tr>
+        <tr><th>Exposure time</th><td>2.5 ks</td></tr>
+      </tbody></table>
+    </div>
+<p style="clear: both; font-size: 80%;">[<a href="#holder">Back to top</a>]</p>
+    <hr style="width: 75%; margin: 0px auto; clear: both;">
+    <h2 id="spec4">spec4 spectrum (T0 + 22043 to 27953 s)</h2>
+      <p><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec4.tar.gz">Download spectral files for spec4 spectrum</a>.</p>
+    <h3>Plots to download</h3>
+    <ul class="prods" title="Other files to download for spec4 spectra">
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec4wt_plot.ps" title="$extn" mode="" image="" of="" spec4="" wt="" spectrum"="">wt mode ps file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec4wt_plot.gif" title="$extn" mode="" image="" of="" spec4="" wt="" spectrum"="">wt mode gif file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec4pc_plot.ps" title="$extn" mode="" image="" of="" spec4="" pc="" spectrum"="">pc mode ps file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec4pc_plot.gif" title="$extn" mode="" image="" of="" spec4="" pc="" spectrum"="">pc mode gif file</a></li> 
+    </ul>
+    <img class="prodimg" src="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/spec4wt_plot.gif" alt="WT mode spectrum of %NAME%" style="max-width: 740px;">
+    <img class="prodimg" src="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/spec4pc_plot.gif" alt="PC mode spectrum of %NAME%" style="max-width: 740px;">
+  
+    <!-- Now plot the results table -->    
+    <br style="clear: both;">
+
+    <div class="fitres">
+      <h3>PC mode. Mean photon arrival: T0+23298 s</h3>
+      <table summary="Model fitted to spec4 data" cellspacing="2px" cellpadding="2px" border="1px">
+        <tbody><tr><th>N<sub>H</sub> (Galactic)</th><td>2.11e+20 cm<sup>-2</sup></td></tr>
+        <tr><th>N<sub>H</sub> (intrinsic)</th><td>1.27 (+0.76, -0.57) x 10<sup>23</sup> cm<sup>-2</sup> </td></tr>
+        <tr><th>z of absorber</th><td>2.0858</td></tr>
+        <tr><th>Photon index</th><td>2.54 (+0.68, -0.58)</td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Observed)</th><td>1.23 (+0.41, -0.29) x 10<sup>-12</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Unabsorbed)</th><td>2.8 x 10<sup>-12</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (obs)</th><td>3.3 x 10<sup>-11</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (unabs)</th><td>7.7 x 10<sup>-11</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>C-stat (dof)</th><td>82.56 (64)</td></tr>
+        <tr><th>Exposure time</th><td>2.7 ks</td></tr>
+      </tbody></table>
+    </div>
+<p style="clear: both; font-size: 80%;">[<a href="#holder">Back to top</a>]</p>
+    <hr style="width: 75%; margin: 0px auto; clear: both;">
+    <h2 id="spec5">spec5 spectrum (T0 + 27953 to 52475 s)</h2>
+      <p><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec5.tar.gz">Download spectral files for spec5 spectrum</a>.</p>
+    <h3>Plots to download</h3>
+    <ul class="prods" title="Other files to download for spec5 spectra">
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec5wt_plot.ps" title="$extn" mode="" image="" of="" spec5="" wt="" spectrum"="">wt mode ps file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec5wt_plot.gif" title="$extn" mode="" image="" of="" spec5="" wt="" spectrum"="">wt mode gif file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec5pc_plot.ps" title="$extn" mode="" image="" of="" spec5="" pc="" spectrum"="">pc mode ps file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec5pc_plot.gif" title="$extn" mode="" image="" of="" spec5="" pc="" spectrum"="">pc mode gif file</a></li> 
+    </ul>
+    <img class="prodimg" src="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/spec5wt_plot.gif" alt="WT mode spectrum of %NAME%" style="max-width: 740px;">
+    <img class="prodimg" src="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/spec5pc_plot.gif" alt="PC mode spectrum of %NAME%" style="max-width: 740px;">
+  
+    <!-- Now plot the results table -->    
+    <br style="clear: both;">
+
+    <div class="fitres">
+      <h3>PC mode. Mean photon arrival: T0+39270 s</h3>
+      <table summary="Model fitted to spec5 data" cellspacing="2px" cellpadding="2px" border="1px">
+        <tbody><tr><th>N<sub>H</sub> (Galactic)</th><td>2.11e+20 cm<sup>-2</sup></td></tr>
+        <tr><th>N<sub>H</sub> (intrinsic)</th><td>1.74 (+1.30, -0.99) x 10<sup>23</sup> cm<sup>-2</sup> </td></tr>
+        <tr><th>z of absorber</th><td>2.0858</td></tr>
+        <tr><th>Photon index</th><td>2.98 (+1.05, -0.89)</td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Observed)</th><td>3.7 (+1.7, -1.1) x 10<sup>-13</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Unabsorbed)</th><td>8.3 x 10<sup>-13</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (obs)</th><td>3.0 x 10<sup>-11</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (unabs)</th><td>6.7 x 10<sup>-11</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>C-stat (dof)</th><td>25.43 (42)</td></tr>
+        <tr><th>Exposure time</th><td>4.9 ks</td></tr>
+      </tbody></table>
+    </div>
+<p style="clear: both; font-size: 80%;">[<a href="#holder">Back to top</a>]</p>
+    <hr style="width: 75%; margin: 0px auto; clear: both;">
+    <h2 id="spec6">spec6 spectrum (T0 + 74237 to 121054 s)</h2>
+      <p><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec6.tar.gz">Download spectral files for spec6 spectrum</a>.</p>
+    <h3>Plots to download</h3>
+    <ul class="prods" title="Other files to download for spec6 spectra">
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec6wt_plot.ps" title="$extn" mode="" image="" of="" spec6="" wt="" spectrum"="">wt mode ps file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec6wt_plot.gif" title="$extn" mode="" image="" of="" spec6="" wt="" spectrum"="">wt mode gif file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec6pc_plot.ps" title="$extn" mode="" image="" of="" spec6="" pc="" spectrum"="">pc mode ps file</a></li> 
+      <li><a href="https://www.swift.ac.uk/xrt_spectra/tprods/SLICE_00302728_103.66.79.91_R59GD3Qqy/spec6pc_plot.gif" title="$extn" mode="" image="" of="" spec6="" pc="" spectrum"="">pc mode gif file</a></li> 
+    </ul>
+    <img class="prodimg" src="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/spec6wt_plot.gif" alt="WT mode spectrum of %NAME%" style="max-width: 740px;">
+    <img class="prodimg" src="UKSSDC%20|%20Swift-XRT%20spectrum%20for%20GRB%20080207_files/spec6pc_plot.gif" alt="PC mode spectrum of %NAME%" style="max-width: 740px;">
+  
+    <!-- Now plot the results table -->    
+    <br style="clear: both;">
+
+    <div class="fitres">
+      <h3>PC mode. Mean photon arrival: T0+89584 s</h3>
+      <table summary="Model fitted to spec6 data" cellspacing="2px" cellpadding="2px" border="1px">
+        <tbody><tr><th>N<sub>H</sub> (Galactic)</th><td>2.11e+20 cm<sup>-2</sup></td></tr>
+        <tr><th>N<sub>H</sub> (intrinsic)</th><td>1.23 (+1.13, -0.72) x 10<sup>23</sup> cm<sup>-2</sup> </td></tr>
+        <tr><th>z of absorber</th><td>2.0858</td></tr>
+        <tr><th>Photon index</th><td>2.80 (+1.17, -0.86)</td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Observed)</th><td>1.13 (+0.58, -0.36) x 10<sup>-13</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Flux (0.3-10 keV)<br>(Unabsorbed)</th><td>4.7 x 10<sup>-10</sup> erg cm<sup>-2</sup> s<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (obs)</th><td>3.0 x 10<sup>-11</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>Counts to flux (unabs)</th><td>1.3 x 10<sup>-7</sup> erg cm<sup>-2</sup> ct<sup>-1</sup> </td></tr>
+        <tr><th>C-stat (dof)</th><td>58.93 (46)</td></tr>
+        <tr><th>Exposure time</th><td>17.5 ks</td></tr>
+      </tbody></table>
+    </div>
+<p style="clear: both; font-size: 80%;">[<a href="#holder">Back to top</a>]</p>
+    <hr style="width: 75%; margin: 0px auto; clear: both;">
+      <div id="footer">        <p>
+          UK Swift Science Data Centre<br>
+          Last updated <span id="PageFootDate">2020 Nov 21 at 09:43:49 UT</span><br>  
+          Web page maintained by Phil Evans<br>
+          E-mail: <a href="mailto:swifthelp@le.ac.uk">swift help</a><br>
+          Please read our <a href="https://www.swift.ac.uk/GDPR.php">privacy notice</a>.
+        </p>
+
+      </div>
+    </div>
+  
+</body></html>

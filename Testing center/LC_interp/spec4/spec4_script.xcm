@@ -1,0 +1,19 @@
+log spec4.log
+cd spec4
+data spec4pc.pi
+query yes 
+setplot energy 
+ignore bad 
+statistic cstat 
+model phabs*zphabs*(powerlaw) & /*
+newpar 1  0.0211 -1
+newpar 2  17.1 -1
+newpar 3  2.0858 -1
+renorm 
+fit
+show
+err 4
+err 5
+save model spec4_model
+save data spec4_data
+exit
