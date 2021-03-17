@@ -143,8 +143,17 @@ for i in range(no_of_specs):
 flux=np.vstack(ff)
 flux=flux*1e-6#Converting from uJansky to Jansky
 
-plt.scatter(time,flux[:,0])
+
+plt.errorbar(time,flux[:,0],fmt='.k',xerr=np.abs(t_data[:,1:].T),yerr=np.abs(flux[:,1:]).T,ecolor='lightgray', elinewidth=3, capsize=0,label="data")
+# plt.scatter(time,flux[:,0])
+plt.xlabel("Times(s)")
+plt.ylabel("Flux(J)")
+plt.title("GRB "+GRB)
 # plt.scatter(time,cnt_data[:,0])
 plt.xscale("log")
 plt.yscale("log")
+plt.savefig(GRB+"_flux.png",dpi=800
 
+final_data=np.hstack((t_data,flux))
+
+np.savetxt("flux_"+"GRB "+ GRB+".txt",final_data,header="Time(s) Time_+error Time_-ve_error Flux(J) Flux_+ve_error Flux__ve_error")

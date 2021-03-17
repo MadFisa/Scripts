@@ -141,9 +141,14 @@ for i in range(no_of_specs):
     ff.append(temp)
 
 flux=np.vstack(ff)
+flux=flux*1e-6#Converting from uJansky to Jansky
+
 
 plt.scatter(time,flux[:,0])
 # plt.scatter(time,cnt_data[:,0])
 plt.xscale("log")
 plt.yscale("log")
 
+final_data=np.hstack((t_data,flux))
+
+np.savetxt("flux_"+"GRB "+ GRB+".txt",final_data,header="Time(s) Time_+error Time_-ve_error Flux(uJ) Flux_+ve_error Flux__ve_error")
