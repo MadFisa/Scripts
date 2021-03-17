@@ -57,7 +57,7 @@ ph,nm=Log_reader(base_name,no_of_specs)
 
 t_bin=Read_t_file(file_name)
 
-ph_idx=ph[:,0] - ph[:,2]
+ph_idx=(ph[:,0] - ph[:,2])
 t=[]
 t_n=[]
 t_p=[]
@@ -76,3 +76,6 @@ plt.xscale('log')
 plt.xlabel("Time (s)")
 plt.ylabel('Photon Index')
 plt.savefig(GRB+"_phIdx.png",dpi=800)
+
+final_data=np.array([t,t_n,t_p,ph_idx,-ph[:,2],ph[:,3]]).T
+np.savetxt("ph_idx_"+"GRB "+ GRB+".txt",final_data,header="Time Time_-error Time_+ve_error Photon_index -ve_error +ve_error")

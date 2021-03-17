@@ -1,0 +1,228 @@
+#XSPEC version: 12.11.1
+#Build Date/Time: Sat Oct 24 23:01:41 2020
+#
+!XSPEC12> cd spec5
+#
+!XSPEC12> data spec5pc.pi
+#***Warning: Detected response matrix energy bin value = 0 (or neg).
+#     XSPEC will instead use small finite value (response file will not be altered).
+#
+#1 spectrum  in use
+# 
+#Spectral Data File: spec5pc.pi  Spectrum 1
+#Net count rate (cts/s) for Spectrum:1  9.439e-03 +/- 1.421e-03 (95.9 % total)
+# Assigned to Data Group 1 and Plot Group 1
+#  Noticed Channels:  1-462
+#  Telescope: SWIFT Instrument: XRT  Channel Type: PI
+#  Exposure Time: 4875 sec
+# Using fit statistic: chi
+# Using Background File                spec5pcback.pi
+#  Background Exposure Time: 4875 sec
+# Using Response (RMF) File            spec5pc.rmf for Source 1
+# Using Auxiliary Response (ARF) File  spec5pc.arf
+#
+#
+!XSPEC12> query yes 
+#
+!XSPEC12> setplot energy 
+#
+!XSPEC12> ignore bad 
+#
+#ignore:   417 channels ignored from  source number 1
+#
+!XSPEC12> statistic cstat 
+#Default fit statistic is set to: C-Statistic
+#   This will apply to all current and newly loaded spectra.
+#
+!XSPEC12> model phabs*zphabs*(powerlaw) & /*
+#
+#========================================================================
+#Model phabs<1>*zphabs<2>*powerlaw<3> Source No.: 1   Active/On
+#Model Model Component  Parameter  Unit     Value
+# par  comp
+#   1    1   phabs      nH         10^22    1.00000      +/-  0.0          
+#   2    2   zphabs     nH         10^22    1.00000      +/-  0.0          
+#   3    2   zphabs     Redshift            0.0          frozen
+#   4    3   powerlaw   PhoIndex            1.00000      +/-  0.0          
+#   5    3   powerlaw   norm                1.00000      +/-  0.0          
+#________________________________________________________________________
+#
+#
+#Fit statistic  : C-Statistic                730682.5     using 45 bins.
+#
+#Test statistic : Chi-Squared              1.994721e+10     using 45 bins.
+# Null hypothesis probability of 0.000000e+00 with 41 degrees of freedom
+# Current data and model not fit yet.
+#
+!XSPEC12> newpar 1  0.0211 -1
+#
+#Fit statistic  : C-Statistic                946396.6     using 45 bins.
+#
+#Test statistic : Chi-Squared              2.340214e+10     using 45 bins.
+# Null hypothesis probability of 0.000000e+00 with 42 degrees of freedom
+# Current data and model not fit yet.
+#
+!XSPEC12> newpar 2  17.1 -1
+#
+#Fit statistic  : C-Statistic                200277.4     using 45 bins.
+#
+#Test statistic : Chi-Squared              5.443660e+09     using 45 bins.
+# Null hypothesis probability of 0.000000e+00 with 43 degrees of freedom
+# Current data and model not fit yet.
+#
+!XSPEC12> newpar 3  2.0858 -1
+#
+#Fit statistic  : C-Statistic                940912.1     using 45 bins.
+#
+#Test statistic : Chi-Squared              2.245161e+10     using 45 bins.
+# Null hypothesis probability of 0.000000e+00 with 43 degrees of freedom
+# Current data and model not fit yet.
+#
+!XSPEC12> renorm 
+#
+#Fit statistic  : C-Statistic                940912.1     using 45 bins.
+#
+#Test statistic : Chi-Squared              2.245161e+10     using 45 bins.
+# Null hypothesis probability of 0.000000e+00 with 43 degrees of freedom
+# Current data and model not fit yet.
+#
+!XSPEC12> fit
+#                                   Parameters
+#C-Statistic  |beta|/N    Lvl    4:PhoIndex        5:norm
+#28107.5      340442        0       5.63796      0.468180
+#7288.53      15395.5       0       8.40790      0.200557
+#472.808      9442.48       0       9.07948     0.0163346
+#59.029       7880.98       0       5.97688    0.00106929
+#38.9089      6038.37      -1       4.94506   0.000980248
+#29.5037      4049.55      -2       4.13307   0.000792926
+#27.0956      3034.29      -3       3.72026   0.000716518
+#26.8478      893.33       -4       3.57016   0.000682241
+#26.8373      118.967      -5       3.53650   0.000672915
+#26.837       6.64878      -6       3.53057   0.000670996
+#==============================
+# Variances and Principal Axes
+#                 4        5  
+# 1.0129E-08| -0.0003   1.0000  
+# 1.3416E-01|  1.0000   0.0003  
+#------------------------------
+#
+#========================
+#  Covariance Matrix
+#        1           2   
+#   1.342e-01   4.647e-05
+#   4.647e-05   2.623e-08
+#------------------------
+#
+#========================================================================
+#Model phabs<1>*zphabs<2>*powerlaw<3> Source No.: 1   Active/On
+#Model Model Component  Parameter  Unit     Value
+# par  comp
+#   1    1   phabs      nH         10^22    2.11000E-02  frozen
+#   2    2   zphabs     nH         10^22    17.1000      frozen
+#   3    2   zphabs     Redshift            2.08580      frozen
+#   4    3   powerlaw   PhoIndex            3.53057      +/-  0.366274     
+#   5    3   powerlaw   norm                6.70996E-04  +/-  1.61954E-04  
+#________________________________________________________________________
+#
+#
+#Fit statistic  : C-Statistic                   26.84     using 45 bins.
+#
+#Test statistic : Chi-Squared                   39.91     using 45 bins.
+# Null hypothesis probability of 6.06e-01 with 43 degrees of freedom
+#
+!XSPEC12> show
+#
+#XSPEC version: 12.11.1
+#
+#Thu Dec 31 13:26:48 2020
+# Auto-saving is done after every command.
+# Fit statistic in use: C-Statistic
+# Minimization technique: Levenberg-Marquardt
+#    Convergence criterion = 0.01
+#    Parameter fit deltas: 0.01 * parValue
+#Using chain rule to calculate statistic derivatives (faster method).
+# Querying disabled - will continue fitting.
+# Prefit-renorming enabled.
+# Solar abundance table: angr
+# Photoionization Cross-Section Table:
+#    vern:  Verner, Ferland, Korista, and Yakovlev 1996
+# Cosmology in use: H0 = 70 q0 = 0 Lambda0 = 0.73
+# Model data directory: /home/asif/heasoft-6.28/x86_64-pc-linux-gnu-libc2.31/../spectral/manager/../modelData/
+# Plot settings:
+#   Showing of individual additive components is OFF.
+#   Showing of background spectra is OFF.
+#   Effective area normalization is OFF.
+#   Current unit settings:
+#      Energy     = keV
+#      Wavelength = angstrom, with Y-Axis displayed per Hz
+#   X-Axis data display mode: Energy
+#   Spectra plots will be shifted to source frame by redshift value z: 0
+#   Device: /null
+#   Plotting of line IDs is OFF.
+#   Splashpage is ON.
+#   xlog for data plots is ON.
+#   ylog for data plots is OFF.
+#
+#   Default plot rebin settings for all plot groups:
+#   Min. Signif.   Max. # Bins   Error Type
+#        0.00000             1         quad
+#
+# Responses read: 
+#   spec5pc.rmf associated with spectrum 1 source 1
+#      energies: 2400 channels: 462
+# Distinct RMF files: 
+#     /home/asif/Documents/Academic/Project/GRB/080207/bb spectra/spec5/spec5pc.rmf
+#
+#1 file 1 spectrum 
+#Spectrum 1  Spectral Data File: spec5pc.pi
+#Net count rate (cts/s) for Spectrum:1  9.519e-03 +/- 1.421e-03 (96.7 % total)
+# Assigned to Data Group 1 and Plot Group 1
+#  Noticed Channels:  31-75
+#  Telescope: SWIFT Instrument: XRT  Channel Type: PI
+#  Exposure Time: 4875 sec
+# Using fit statistic: cstat
+# Using Background File                spec5pcback.pi
+#  Background Exposure Time: 4875 sec
+# Using Response (RMF) File            spec5pc.rmf for Source 1
+# Using Auxiliary Response (ARF) File  spec5pc.arf
+#
+# Spectral data counts: 48
+# Model predicted rate: 9.44907E-03
+#
+#
+#Current model list:
+#
+#========================================================================
+#Model phabs<1>*zphabs<2>*powerlaw<3> Source No.: 1   Active/On
+#Model Model Component  Parameter  Unit     Value
+# par  comp
+#   1    1   phabs      nH         10^22    2.11000E-02  frozen
+#   2    2   zphabs     nH         10^22    17.1000      frozen
+#   3    2   zphabs     Redshift            2.08580      frozen
+#   4    3   powerlaw   PhoIndex            3.53057      +/-  0.366274     
+#   5    3   powerlaw   norm                6.70996E-04  +/-  1.61954E-04  
+#________________________________________________________________________
+#
+#   Using energies from responses.
+#
+#Fit statistic  : C-Statistic                   26.84     using 45 bins.
+#
+#Test statistic : Chi-Squared                   39.91     using 45 bins.
+# Null hypothesis probability of 6.06e-01 with 43 degrees of freedom
+#
+#Bayes is off
+#
+#
+!XSPEC12> err 4
+# Parameter   Confidence Range (2.706)
+#     4      2.89381      4.21791    (-0.635769,0.688331)
+#
+!XSPEC12> err 5
+# Parameter   Confidence Range (2.706)
+#     5  0.000432684   0.00100293    (-0.000237919,0.000332328)
+#
+!XSPEC12> save model spec5_model
+# please enter Y/y or N/n  please enter Y/y or N/n 
+#
+# XSPEC: quit
+#

@@ -1,0 +1,19 @@
+z= 0.0785 #redshift
+eE=-1.0  
+phi=7.5*10**(-8)  # fluence
+k_bol=18.7   # for bat:5 and for fermi:1
+eta=0.15   # prompt radiation efficiency
+
+nlive= 1000
+theta_up = 30.
+theta_lo = 0.001
+n0_up = 5
+n0_lo = -2
+p_up = 2.8
+p_lo = 2.00001
+eB_up = 3
+eB_lo = -6
+eE_up = 3
+eE_lo = -6
+en_up = 52
+en_lo = 48
